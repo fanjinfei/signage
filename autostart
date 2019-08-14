@@ -1,0 +1,9 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+#@xscreensaver -no-splash
+#point-rpi
+@xset s off
+@xset -dpms
+@xset s noblank
+@python /home/pi/src/signage/sign.py /home/pi/src/signage /home/pi/src/signage/static&
+@chromium-browser --noerrdialogs --kiosk http://localhost:8080/en/search

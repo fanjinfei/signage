@@ -5,15 +5,17 @@ Original https://pimylifeup.com/raspberry-pi-kiosk/
 
 ## 1. setup  
 ```  
-sudo apt-get purge wolfram-engine scratch scratch2 nuscratch sonic-pi idle3 -y
-sudo apt-get purge smartsim java-common minecraft-pi libreoffice* -y
-sudo apt-get clean
-sudo apt-get autoremove -y
+#sudo apt-get purge wolfram-engine scratch scratch2 nuscratch sonic-pi idle3 -y
+#sudo apt-get purge smartsim java-common minecraft-pi libreoffice* -y
+#sudo apt-get clean
+#sudo apt-get autoremove -y
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install xdotool unclutter sed
 sudo raspi-config  #boot option->desktop auto login
 ```
+
+We can use /etc/xdg/lxsession/LXDE-pi/autostart instead of the following steps 2-.....
 
 ## 2. Script  
  #nano /home/pi/kiosk.sh  
