@@ -5,5 +5,13 @@
 @xset s off
 @xset -dpms
 @xset s noblank
-@python /home/pi/src/signage/sign.py /home/pi/src/signage /home/pi/src/signage/static&
-@chromium-browser --noerrdialogs --kiosk http://localhost:8080/en/search
+@python /home/pi/src/signage/sign.py &
+@sleep 10
+@chromium-browser --noerrdialogs --kiosk http://localhost:8001/static/welcome/index.html  http://localhost:8001/static/radar/index.html http://localhost:8001/static/digital_innovation/index.html
+@/home/pi/src/signage/refresh.sh
+#while true; do
+#      xdotool keydown ctrl+Tab; xdotool keyup ctrl+Tab;
+      #xdotool keydown ctrl+r; xdotool keyup ctrl+r; TO-Refresh
+#      sleep 15
+#done
+

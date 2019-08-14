@@ -78,6 +78,6 @@ if __name__ == "__main__":
     #test()
 
     from gevent.pywsgi import WSGIServer
-    http_server = WSGIServer(('', 8001), app)
+    http_server = WSGIServer(('0.0.0.0', 8001), app)
     http_server.serve_forever()
 
