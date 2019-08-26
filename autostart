@@ -5,8 +5,11 @@
 @xset s off
 @xset -dpms
 @xset s noblank
+@unclutter --root &
 @python /home/pi/src/signage/sign.py &
 @sleep 10
+@sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/pi/.config/chromium/Default/Preferences
+@sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chromium/Default/Preferences
 @chromium-browser --noerrdialogs --kiosk http://localhost:8001/static/welcome/index.html  http://localhost:8001/static/radar/index.html http://localhost:8001/static/digital_innovation/index.html
 @/home/pi/src/signage/refresh.sh
 #while true; do
